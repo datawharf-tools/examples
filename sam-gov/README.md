@@ -1,6 +1,6 @@
 # sam-gov-opportunities
 
-Small-business IT solicitations. Runs without a SAM.gov key (daily public file).
+Recent software solicitations (keyword search, last 30 days). Runs without a SAM.gov key (daily public file).
 
 ```bash
 export APIFY_TOKEN=...   # from Apify Console > Settings > API & Integrations

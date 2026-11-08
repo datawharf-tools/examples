@@ -1,5 +1,5 @@
 """IT-services contract notices from German and French buyers (last 30 days).
-Usage: APIFY_TOKEN=... python run.py   (pip install apify-client first)
+Usage: APIFY_TOKEN=... python run.py   (pip install "apify-client>=3" first)
 """
 import os
 
@@ -26,7 +26,7 @@ run_input = {
 }
 
 run = client.actor("datawharf-tools/eu-ted-tenders").call(run_input=run_input)
-items = list(client.dataset(run["defaultDatasetId"]).iterate_items())
+items = list(client.dataset(run.default_dataset_id).iterate_items())
 for row in items:
     print(" | ".join(str(row.get(k, ""))[:60] for k in ["noticeId", "buyerCountry", "publicationDate", "deadline", "title"]))
-print(f"{len(items)} rows, run {run['id']}")
+print(f"{len(items)} rows, run {run.id}")

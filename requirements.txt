@@ -1,1 +1,1 @@
-apify-client>=1.8
+apify-client>=3.0
