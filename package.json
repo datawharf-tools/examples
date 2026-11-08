@@ -1,0 +1,8 @@
+{
+  "name": "datawharf-actor-examples",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "dependencies": { "apify-client": "^2.12.0" }
+}
